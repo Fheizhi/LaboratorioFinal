@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Crear una cuenta</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <form>
+        <div class="input-container">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" title="El nombre solo puede contener letras" required onblur="validarNombre()" />
+          <span class="icono-validacion validacion-correcto"></span>
+          <span class="icono-validacion validacion-incorrecto"></span>
+        </div>
+        <div class="input-container">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" title="Introduce un email correcto" required onblur="validarEmail()" />
+          <span class="icono-validacion validacion-correcto"></span>
+          <span class="icono-validacion validacion-incorrecto"></span>
+        </div>
+        <div class="input-container">
+          <label for="clave">Clave:</label>
+          <input type="password" id="clave" name="clave" title="La contraseña solo puede tener 8 caracteres" required maxlength="8" onblur="validarClave()" />
+          <span class="icono-validacion validacion-correcto"></span>
+          <span class="icono-validacion validacion-incorrecto"></span>
+        </div>
+        <div class="input-container">
+          <label for="confirma-clave">Confirma clave:</label>
+          <input type="password" id="confirma-clave" name="confirma-clave" title="Las contraseñas deben coincidir" maxlength="8" required onblur="validarConfirmaClave()" />
+          <span class="icono-validacion validacion-correcto"></span>
+          <span class="icono-validacion validacion-incorrecto"></span>
+        </div>
+        <button type="submit" onclick="alert('Registro completado')">Enviar</button>
+      </form>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

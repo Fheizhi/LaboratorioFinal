@@ -1,0 +1,85 @@
+body {
+    background-color: black;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #2f3744;
+    border-radius: 10px;
+    border: 1px solid grey;
+  }
+  
+  form div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    width: 90%;
+  }
+  
+  form label {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+  }
+  
+  button[type="submit"] {
+    background-color: #6c63fe;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 90%;
+  }
+  
+  .icono-validacion:after {
+    position: fixed;
+    top: 100%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+  }
+  
+  .icono-validacion.valido:after {
+    content: url('imagenes/success-icon.svg');
+  }
+  
+  .icono-validacion.invalido:after {
+    content: url('imagenes/error-icon.svg');
+  }
+  
+  input.valido {
+    border: 5px solid lime;
+  }
+  
+  input.invalido {
+    border: 5px solid red;
+  }
