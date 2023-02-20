@@ -67,19 +67,19 @@ body {
     width: 16px;
     height: 16px;
   }
-  
-  .icono-validacion.valido:after {
-    content: url('imagenes/success-icon.svg');
-  }
-  
-  .icono-validacion.invalido:after {
-    content: url('imagenes/error-icon.svg');
-  }
-  
+
   input.valido {
     border: 5px solid lime;
+    background-image: url("imagenes/success-icon.svg");
+    background-size: 25px;
+    background-position: right;
+    background-repeat: no-repeat;
   }
   
   input.invalido {
     border: 5px solid red;
+    background-image: url("imagenes/error-icon.svg");
+    background-size: 25px;
+    background-position: right;
+    background-repeat: no-repeat;
   }

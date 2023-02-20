@@ -1,16 +1,3 @@
-function VerificarClave() {
-  const password = document.getElementById("clave");
-  const confirmPassword = document.getElementById("confirma-clave");
-  const error = document.getElementById("error");
-
-  if (password.value !== confirmPassword.value) {
-    error.textContent = "Las contraseñas no coinciden";
-    return false;
-  } else {
-    error.textContent = "";
-  }
-}
-
 const nombre = document.getElementById('nombre');
 const email = document.getElementById('email');
 const clave = document.getElementById('clave');
@@ -69,5 +56,16 @@ function validarClave() {
     elementosValidacion[2].classList.add('Validacion-incorrecto');
   }
   VerificarClave();
+}
+
+const introducirclave = document.getElementById('clave');
+const confirmarclave = document.getElementById('confirma-clav');
+
+function validarclaves() {
+    if (introducirclave.value !== confirmarclave.value) {
+      confirmarclave.setCustomValidity("Las claves no coinciden");
+    } else {
+      confirmarclave.setCustomValidity("");
+    }
 }
 
